@@ -1,0 +1,30 @@
+#!/bin/bash
+
+COUNT=0
+CURRENT_DIR="$PWD"
+PD="device/samsung/kyleprods/patches"
+PATCHES=(
+'build				build.diff'
+'frameworks/av			frameworks_av.diff'
+'frameworks/base		frameworks_base.diff'
+'frameworks/native		frameworks_native.diff'
+'frameworks/opt/telephony	frameworks_opt_telephony.diff'
+'hardware/broadcom/libbt	hardware_broadcom_libbt.diff'
+'hardware/libhardware_legacy    hardware_libhardware_legacy.diff'
+'system/core			system_core.diff'
+'packages/apps/Dialer           packages_apps_Dialer.diff'
+)
+
+while [ "x${PATCHES[COUNT]}" != "x" ]
+do
+	CURRENT="${PATCHES[COUNT]}"
+	FOLDER=`echo "$CURRENT" | awk '{print $1}'`
+	PATCH=`echo "$CURRENT" | awk '{print $2}'`
+
+	cd "$FOLDER"
+	echo Patching "$FOLDER" ...
+	patch -p1 < "$CURRENT_DIR/$PD/$PATCH"
+	cd "$CURRENT_DIR"
+
+	COUNT=$(($COUNT + 1))
+done
