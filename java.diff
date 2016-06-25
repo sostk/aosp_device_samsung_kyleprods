@@ -1,6 +1,6 @@
 diff --git a/core/main.mk b/core/main.mk
 index cfa1b7f..5b24ae1 100644
---- a/core/build_id.mk
+--- a/core/main.mk
 +++ b/core/main.mk
 
 @@ -148,8 +148,9 @@ $(info $(space))
