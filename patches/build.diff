@@ -259,7 +259,7 @@ new file mode 100644
 index 0000000..c9d2955
 --- /dev/null
 +++ b/core/tasks/kernel.mk
-@@ -0,0 +1,203 @@
+@@ -0,0 +1,200 @@
 # Copyright (C) 2012 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -275,8 +275,6 @@ index 0000000..c9d2955
 # limitations under the License.
 
 # Android makefile to build kernel as a part of Android Build
-
--include vendor/omni/config/branding.mk
 
 TARGET_AUTO_KDIR := $(shell echo $(TARGET_DEVICE_DIR) | sed -e 's/^device/kernel/g')
 
