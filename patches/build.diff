@@ -747,3 +747,19 @@ index 3c58163..5d99797 100755
    script.ShowProgress(0.5, 0)
 -- 
 2.3.6
+diff --git a/core/main.mk b/core/main.mk
+index cfa1b7f..5b24ae1 100644
+--- a/core/main.mk
++++ b/core/main.mk
+
+@@ -148,8 +148,9 @@ $(info $(space))
+ $(info You use OpenJDK but only Sun/Oracle JDK is supported.)
+ $(info Please follow the machine setup instructions at)
+ $(info $(space)$(space)$(space)$(space)https://source.android.com/source/download.html)
++$(info $(space))
++$(info Continue at your own peril!)
+ $(info ************************************************************)
+-$(error stop)
+ endif
+ 
+ # Check for the correct version of java
