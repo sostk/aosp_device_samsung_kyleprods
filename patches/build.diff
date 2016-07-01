@@ -797,7 +797,7 @@ index cfa1b7f..5b24ae1 100644
   $(info $(space))
   $(info Please follow the machine setup instructions at)
   $(info $(space)$(space)$(space)$(space)https://source.android.com/source/download.html)
-  diff --git a/core/droiddoc.mk b/core/droiddoc.mk
+diff --git a/core/droiddoc.mk b/core/droiddoc.mk
 index cfa1b7f..5b24ae1 100644
 --- a/core/droiddoc.mk
 +++ b/core/droiddoc.mk
@@ -821,7 +821,7 @@ index cfa1b7f..5b24ae1 100644
   		javadoc \
                   $(PRIVATE_DROIDDOC_OPTIONS) \
                   \@$(PRIVATE_SRC_LIST_FILE) \
-  diff --git a/core/combo/javac.mk b/core/combo/javac.mk
+diff --git a/core/combo/javac.mk b/core/combo/javac.mk
 index cfa1b7f..5b24ae1 100644
 --- a/core/combo/javac.mk
 +++ b/core/combo/javac.mk
