@@ -822,12 +822,11 @@ index cfa1b7f..5b24ae1 100644
  +        -source 1.5 -Xmaxerrs 9999999
       $(info CUSTOM_JAVA_COMPILER=openjdk)
   endif
-  diff --git a/core/droiddoc.mk b/core/droiddoc.mk
+diff --git a/core/droiddoc.mk b/core/droiddoc.mk
 index cfa1b7f..5b24ae1 100644
 --- a/core/droiddoc.mk
 +++ b/core/droiddoc.mk
-roiddoc.mk
- @@ -161,6 +161,9 @@ $(full_target): $(full_src_files) $(droiddoc_templates) $(droiddoc) $(html_dir_f
+@@ -161,6 +161,9 @@ $(full_target): $(full_src_files) $(droiddoc_templates) $(droiddoc) $(html_dir_f
   	$(call prepare-doc-source-list,$(PRIVATE_SRC_LIST_FILE),$(PRIVATE_JAVA_FILES), \
   			$(PRIVATE_SOURCE_INTERMEDIATES_DIR) $(PRIVATE_ADDITIONAL_JAVA_DIR))
   	$(hide) ( \
