@@ -780,7 +780,7 @@ index cfa1b7f..5b24ae1 100644
   $(info $(space))
   $(info Please follow the machine setup instructions at)
   $(info $(space)$(space)$(space)$(space)https://source.android.com/source/download.html)
- @@ -170,14 +170,14 @@ $(error stop)
+@@ -170,14 +170,14 @@ $(error stop)
   endif
   
   # Check for the correct version of javac
