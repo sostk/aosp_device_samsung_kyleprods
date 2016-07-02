@@ -1,0 +1,22 @@
+diff -ur a/libcore/libart/src/main/java/java/lang/Enum.java
+ b/libcore/libart/src/main/java/java/lang/Enum.java
+@@ -148,7 +148,7 @@ protected final Object clone() throws CloneNotSupportedException {
+      * @see java.lang.Comparable
+      */
+     public final int compareTo(E o) {
+-        return ordinal - o.ordinal;
++        return ordinal - o.ordinal();
+     }
+ 
+     /** 
+diff -ur a/libcore/libdvm/src/main/java/java/lang/Enum.java
+ b/libcore/libdvm/src/main/java/java/lang/Enum.java
+@@ -147,7 +147,7 @@ protected final Object clone() throws CloneNotSupportedException {
+      * @see java.lang.Comparable
+      */
+     public final int compareTo(E o) {
+-        return ordinal - o.ordinal;
++        return ordinal - o.ordinal();
+     }
+ 
+     /** 
