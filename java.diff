@@ -1,16 +1,23 @@
-diff --git a/core/main.mk b/core/main.mk
-index cfa1b7f..5b24ae1 100644
---- a/core/main.mk
-+++ b/core/main.mk
-
-@@ -148,8 +148,9 @@ $(info $(space))
- $(info You use OpenJDK but only Sun/Oracle JDK is supported.)
- $(info Please follow the machine setup instructions at)
- $(info $(space)$(space)$(space)$(space)https://source.android.com/source/download.html)
-+$(info $(space))
-+$(info Continue at your own peril!)
- $(info ************************************************************)
--$(error stop)
- endif
- 
- # Check for the correct version of java
+diff -ur a/build/core/droiddoc.mk b/build/core/droiddoc.mk
+--- a/build/core/droiddoc.mk	2016-05-08 03:42:44.688995999 +0000
++++ b/build/core/droiddoc.mk	2016-05-08 03:34:25.212995999 +0000
+@@ -161,6 +161,9 @@
+ 	$(call prepare-doc-source-list,$(PRIVATE_SRC_LIST_FILE),$(PRIVATE_JAVA_FILES), \
+ 			$(PRIVATE_SOURCE_INTERMEDIATES_DIR) $(PRIVATE_ADDITIONAL_JAVA_DIR))
+ 	$(hide) ( \
++		head -1 $(PRIVATE_SRC_LIST_FILE) | tr " " "\n" | sort | uniq | tr "\n" " " > $(PRIVATE_SRC_LIST_FILE)_temp; \
++		cat $(PRIVATE_SRC_LIST_FILE) | sed '1 d' >> $(PRIVATE_SRC_LIST_FILE)_temp; \
++		mv $(PRIVATE_SRC_LIST_FILE)_temp $(PRIVATE_SRC_LIST_FILE); \	
+ 		javadoc \
+                 \@$(PRIVATE_SRC_LIST_FILE) \
+                 -J-Xmx1280m \
+@@ -194,6 +197,9 @@
+ 	$(call prepare-doc-source-list,$(PRIVATE_SRC_LIST_FILE),$(PRIVATE_JAVA_FILES), \
+ 			$(PRIVATE_SOURCE_INTERMEDIATES_DIR) $(PRIVATE_ADDITIONAL_JAVA_DIR))
+ 	$(hide) ( \
++		head -1 $(PRIVATE_SRC_LIST_FILE) | tr " " "\n" | sort | uniq | tr "\n" " " > $(PRIVATE_SRC_LIST_FILE)_temp; \
++		cat $(PRIVATE_SRC_LIST_FILE) | sed '1 d' >> $(PRIVATE_SRC_LIST_FILE)_temp; \
++		mv $(PRIVATE_SRC_LIST_FILE)_temp $(PRIVATE_SRC_LIST_FILE); \
+ 		javadoc \
+                 $(PRIVATE_DROIDDOC_OPTIONS) \
+                 \@$(PRIVATE_SRC_LIST_FILE) \
