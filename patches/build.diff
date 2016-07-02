@@ -763,9 +763,9 @@ index cfa1b7f..5b24ae1 100644
  endif
  
  # Check for the correct version of java
- @@ -155,14 +155,14 @@ $(info ************************************************************)
-  endif
-  
+@@ -154,14 +154,14 @@ $(info ************************************************************)
+ endif
+ 
  # Check for the correct version of java
 -java_version := $(shell java -version 2>&1 | head -n 1 | grep '^java .*[ "]1\.6[\. "$$]')
 +java_version := $(shell java -version 2>&1 | head -n 1 | grep '^java .*[ "]1\.[67][\. "$$]')
@@ -778,11 +778,11 @@ index cfa1b7f..5b24ae1 100644
 -$(info The correct version is: Java SE 1.6.)
 +$(info The correct version is: Java SE 1.6 or 1.7.)
  $(info $(space))
-  $(info Please follow the machine setup instructions at)
-  $(info $(space)$(space)$(space)$(space)https://source.android.com/source/download.html)
+ $(info Please follow the machine setup instructions at)
+ $(info $(space)$(space)$(space)$(space)https://source.android.com/source/download.html)
 @@ -170,14 +170,14 @@ $(error stop)
-  endif
-  
+ endif
+ 
  # Check for the correct version of javac
 -javac_version := $(shell javac -version 2>&1 | head -n 1 | grep '[ "]1\.6[\. "$$]')
 +javac_version := $(shell javac -version 2>&1 | head -n 1 | grep '[ "]1\.[67][\. "$$]')
