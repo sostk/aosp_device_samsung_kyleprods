@@ -797,9 +797,9 @@ index cfa1b7f..5b24ae1 100644
  $(info $(space))
  $(info Please follow the machine setup instructions at)
  $(info $(space)$(space)$(space)$(space)https://source.android.com/source/download.html)
-diff -ur a/build/core/tasks/kernel.mk b/build/core/tasks/kernel.mk
---- a/build/core/tasks/kernel.mk	2016-02-06 00:00:00.000000000 +0000
-+++ b/build/core/tasks/kernel.mk	2016-02-06 00:00:00.000000000 +0000
+diff -ur a/build/tasks/kernel.mk b/build/tasks/kernel.mk
+--- a/core/tasks/kernel.mk	2016-02-06 00:00:00.000000000 +0000
++++ b/core/tasks/kernel.mk	2016-02-06 00:00:00.000000000 +0000
 @@ -143,9 +143,9 @@
      endif
      ifneq ($(TARGET_KERNEL_CUSTOM_TOOLCHAIN),)
