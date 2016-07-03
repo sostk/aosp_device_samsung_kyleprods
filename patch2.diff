@@ -1,6 +1,7 @@
-diff -ur a/libcore/libart/src/main/java/java/lang/Enum.java
- b/libcore/libart/src/main/java/java/lang/Enum.java
-@@ -148,7 +148,7 @@ protected final Object clone() throws CloneNotSupportedException {
+diff -ur a/libcore/libart/src/main/java/java/lang/Enum.java b/libcore/libart/src/main/java/java/lang/Enum.java
+--- a/libcore/libart/src/main/java/java/lang/Enum.java	2016-07-01 16:38:52.000000000 +0545
++++ b/libcore/libart/src/main/java/java/lang/Enum.java	2016-07-03 08:04:49.730006786 +0545
+@@ -148,7 +148,7 @@
       * @see java.lang.Comparable
       */
      public final int compareTo(E o) {
@@ -8,10 +9,12 @@ diff -ur a/libcore/libart/src/main/java/java/lang/Enum.java
 +        return ordinal - o.ordinal();
      }
  
-     /** 
-diff -ur a/libcore/libdvm/src/main/java/java/lang/Enum.java
- b/libcore/libdvm/src/main/java/java/lang/Enum.java
-@@ -147,7 +147,7 @@ protected final Object clone() throws CloneNotSupportedException {
+     /**
+Only in b/libcore/libart/src/main/java/java/lang: Enum.java~
+diff -ur a/libcore/libdvm/src/main/java/java/lang/Enum.java b/libcore/libdvm/src/main/java/java/lang/Enum.java
+--- a/libcore/libdvm/src/main/java/java/lang/Enum.java	2016-07-01 16:38:52.000000000 +0545
++++ b/libcore/libdvm/src/main/java/java/lang/Enum.java	2016-07-03 08:05:36.342004919 +0545
+@@ -147,7 +147,7 @@
       * @see java.lang.Comparable
       */
      public final int compareTo(E o) {
@@ -19,4 +22,5 @@ diff -ur a/libcore/libdvm/src/main/java/java/lang/Enum.java
 +        return ordinal - o.ordinal();
      }
  
-     /** 
+     /**
+Only in b/libcore/libdvm/src/main/java/java/lang: Enum.java~
